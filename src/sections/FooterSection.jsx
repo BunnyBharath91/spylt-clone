@@ -84,11 +84,12 @@ const FooterSection = () => {
         </div>
 
         <div className="copyright-box">
-          {/* The final row with copyright and legal links. */}
-          <p>Copyright © 2025 Spylt - All Rights Reserved</p>
+          <p>Built by Bharath Kumar Borra</p>
           <div className="flex items-center gap-7">
-            <p>Privacy Policy</p>
-            <p>Terms of Sеrvice</p>
+            <p>
+              Inspired by the 2026 version of{" "}
+              <a href="https://www.spylt.com">spylt.com</a>
+            </p>
           </div>
         </div>
       </div>
