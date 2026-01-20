@@ -1,6 +1,5 @@
 import { useMediaQuery } from "react-responsive";
 import { nutrientLists } from "../constants";
-import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
@@ -10,15 +9,7 @@ const NutritionSection = () => {
     query: "(max-width: 768px)",
   });
 
-  const [lists, setLists] = useState(nutrientLists);
-
-  useEffect(() => {
-    if (isMobile) {
-      setLists(nutrientLists.slice(0, 3));
-    } else {
-      setLists(nutrientLists);
-    }
-  }, [isMobile]);
+  const lists = isMobile ? nutrientLists.slice(0, 3) : nutrientLists;
 
   useGSAP(() => {
     const titleSplit = SplitText.create(".nutrition-title", {

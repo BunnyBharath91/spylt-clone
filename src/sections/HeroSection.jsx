@@ -33,7 +33,7 @@ const HeroSection = () => {
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "circ.out",
         },
-        "-=0.5"
+        "-=0.5",
       )
       .from(
         titleSplit.chars,
@@ -42,7 +42,7 @@ const HeroSection = () => {
           stagger: 0.02,
           ease: "power2.out",
         },
-        "-=0.5"
+        "-=0.5",
       );
 
     const heroTl = gsap.timeline({
@@ -97,12 +97,12 @@ const HeroSection = () => {
             className="hero-text-scroll"
           >
             <div className="hero-subtitle">
-              <h1>Protein + Caffine </h1>
+              <h1>Protein + Caffeine </h1>
             </div>
           </div>
 
           <h2>
-            Live life to the fullest  with SPYLT: Shatter boredom and embrace
+            Live life to the fullest with SPYLT: Shatter boredom and embrace
             your inner kid with every deliciously smooth chug.
           </h2>
 
