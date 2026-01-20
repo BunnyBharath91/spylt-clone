@@ -1,17 +1,15 @@
 import { useGSAP } from "@gsap/react";
-import gsap, { SplitText } from "gsap/all";
-import React from "react";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
 
 const MessageSection = () => {
   useGSAP(() => {
     const firstMsgSplit = SplitText.create(".first-message", {
       type: "words",
     });
-
-    const secondMsgSplit = SplitText.create(".second-message", {
+    const secMsgSplit = SplitText.create(".second-message", {
       type: "words",
     });
-
     const paragraphSplit = SplitText.create(".message-content p", {
       type: "words, lines",
       linesClass: "paragraph-line",
@@ -28,8 +26,7 @@ const MessageSection = () => {
         scrub: true,
       },
     });
-
-    gsap.to(secondMsgSplit.words, {
+    gsap.to(secMsgSplit.words, {
       color: "#faeade",
       ease: "power1.in",
       stagger: 1,
@@ -48,7 +45,6 @@ const MessageSection = () => {
         start: "top 60%",
       },
     });
-
     revealTl.to(".msg-text-scroll", {
       duration: 1,
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -61,7 +57,6 @@ const MessageSection = () => {
         start: "top center",
       },
     });
-
     paragraphTl.from(paragraphSplit.words, {
       yPercent: 300,
       rotate: 3,
@@ -77,27 +72,28 @@ const MessageSection = () => {
         <div className="w-full h-full">
           <div className="msg-wrapper">
             <h1 className="first-message">Stir up your fearless past and</h1>
+
             <div
               style={{
-                clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
               }}
               className="msg-text-scroll"
             >
-              <div className="bg-light-brown md:pb-5 pb-3 px-3">
+              <div className="bg-light-brown md:pb-5 pb-3 px-5">
                 <h2 className="text-red-brown">Fuel Up</h2>
               </div>
             </div>
 
             <h1 className="second-message">
-              Your future with every gulp of Perfect Protein
+              your future with every gulp of Perfect Protein
             </h1>
           </div>
 
           <div className="flex-center md:mt-20 mt-10">
             <div className="max-w-md px-10 flex-center overflow-hidden">
               <p>
-                Rev up your rebel sprit and feed the adventure of life with
-                SPLYT, when you're one chug away from epic nostalgia adn
+                Rev up your rebel spirit and feed the adventure of life with
+                SPYLT, where you’re one chug away from epic nostalgia and
                 fearless fun.
               </p>
             </div>
