@@ -36,7 +36,7 @@ const TestimonialSection = () => {
     });
 
     tl.to(".testimonials-section .first-title", {
-      xPercent: 70,
+      xPercent: isLargeScreen ? 25 : 70,
     })
       .to(
         ".testimonials-section .sec-title",
@@ -48,7 +48,7 @@ const TestimonialSection = () => {
       .to(
         ".testimonials-section .third-title",
         {
-          xPercent: -50,
+          xPercent: isLargeScreen ? -25 : -50,
         },
         "<",
       );
@@ -56,7 +56,7 @@ const TestimonialSection = () => {
     const pinTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".testimonials-section",
-        start: "10% top",
+        start: "top top",
         end: "200% top",
         scrub: 1.5,
         pin: true,
