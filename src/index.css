@@ -249,7 +249,11 @@ body::-webkit-scrollbar {
     @apply 2xl:min-h-dvh overflow-hidden relative bg-[#222123];
 
     .social-btn {
-      @apply border border-[#faeade33] md:size-[5vw] size-14 md:p-0 p-3 flex justify-center items-center rounded-full hover:bg-[#ffffff1a] transition-colors cursor-pointer;
+      @apply border border-[#faeade33] md:size-[6vw] lg:size-[5vw] size-14 md:p-0 p-3 flex justify-center items-center rounded-full hover:bg-[#ffffff1a] transition-colors cursor-pointer;
+    }
+
+    .social-btn img {
+      @apply size-7 lg:size-9;
     }
 
     input {
