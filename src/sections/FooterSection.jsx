@@ -84,7 +84,7 @@ const FooterSection = () => {
         </div>
 
         <div className="copyright-box">
-          <p>Built by Bharath Kumar Borra</p>
+          <a href="https://bharath-kumar-borra.vercel.app" target="_blank">Built by Bharath Kumar Borra</a>
           <div className="flex items-center gap-7">
             <p>
               Inspired by the 2026 version of{" "}
